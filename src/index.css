@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Custom smooth scrollbar */
