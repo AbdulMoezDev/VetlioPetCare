@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBooking } from "../context/BookingContext";
+import { useAuth } from "../context/AuthContext";
 import {
   X,
   CheckCircle2,
@@ -143,7 +144,9 @@ function BookingModal({ isOpen: propIsOpen, onClose: propOnClose }) {
 
   const [formErrors, setFormErrors] = useState({});
 
-  // Sync preselected service from context if available
+  // Sync preselected service from context or prefill logged in user info
+  const { user, profile } = useAuth();
+
   useEffect(() => {
     if (context?.preselectedServiceId) {
       setFormData((prev) => ({
@@ -151,7 +154,16 @@ function BookingModal({ isOpen: propIsOpen, onClose: propOnClose }) {
         serviceId: context.preselectedServiceId,
       }));
     }
-  }, [context?.preselectedServiceId, isOpen]);
+
+    if (user && isOpen) {
+      setFormData((prev) => ({
+        ...prev,
+        ownerName: prev.ownerName || profile?.full_name || user?.user_metadata?.full_name || "",
+        ownerEmail: prev.ownerEmail || user?.email || "",
+        ownerPhone: prev.ownerPhone || profile?.phone || user?.user_metadata?.phone || "",
+      }));
+    }
+  }, [context?.preselectedServiceId, isOpen, user, profile]);
 
   // Close on Escape key
   useEffect(() => {
