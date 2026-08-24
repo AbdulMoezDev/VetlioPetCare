@@ -1,5 +1,5 @@
 import React from "react";
-import { Heart, ShieldCheck, Stethoscope, Sparkles } from "lucide-react";
+import { Heart, ShieldCheck, Stethoscope, Award } from "lucide-react";
 
 function OurValuesSection() {
   const values = [
@@ -13,7 +13,7 @@ function OurValuesSection() {
       title: "Personalized Care",
       desc: "Every pet is one-of-a-kind. We customize medical treatments, wellness routines, and nutrition to match individual health profiles.",
       color: "#FB7E46",
-      icon: Sparkles,
+      icon: Award,
     },
     {
       title: "Trusted Expertise",
@@ -32,7 +32,7 @@ function OurValuesSection() {
   return (
     <>
       <section
-        id="values"
+        id="about"
         className="bg-[#f6efe4] flex flex-col items-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
       >
         <div className="text-center max-w-2xl mb-12 md:mb-20">
