@@ -66,7 +66,7 @@ function Home() {
       <OurValuesSection />
 
       {/* 6. Pet Parent Testimonials */}
-      <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#ebdcc9]/60">
+      <section id="testimonials" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#ebdcc9]/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <span className="text-xs font-bold text-[#70A352] uppercase tracking-widest bg-[#f6efe4] px-3.5 py-1 rounded-full border border-[#ebdcc9] inline-block mb-3">
@@ -117,7 +117,7 @@ function Home() {
       </section>
 
       {/* 7. Urgent Hotline Callout */}
-      <section className="bg-[#27221F] text-white py-12 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="bg-[#27221F] text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-400">

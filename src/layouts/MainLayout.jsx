@@ -3,7 +3,9 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BookingModal from "../components/BookingModal";
+import AuthModal from "../components/auth/AuthModal";
 import ScrollToTop from "../components/layout/ScrollToTop";
+import ScrollWidget from "../components/layout/ScrollWidget";
 
 function MainLayout() {
   return (
@@ -24,6 +26,12 @@ function MainLayout() {
 
       {/* Global Interactive Booking Wizard Modal */}
       <BookingModal />
+
+      {/* Global Supabase Auth Modal */}
+      <AuthModal />
+
+      {/* Floating Smooth Scroll Widget (Top / Bottom) */}
+      <ScrollWidget />
     </div>
   );
 }
