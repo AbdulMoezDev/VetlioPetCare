@@ -24,7 +24,7 @@ function HowItWorks() {
 
           <div className="hidden lg:block mt-8 p-5 bg-white/60 rounded-2xl border border-[#ebdcc9]">
             <p className="text-xs text-stone-600 font-semibold leading-relaxed">
-              ⭐ Trusted by over 10,000+ pet parents nationwide with 24/7 dedicated support.
+              ⭐ Trusted by over 500+ pet parents nationwide with 24/7 dedicated support.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ function HowItWorks() {
             </div>
             <div className="bg-[#6BA34B] h-48 md:h-1/2 flex items-center justify-center p-6">
               <img
-                src="/Step3Image.png"
+                src="/Step3Image2.png"
                 alt="Step 3 Care Illustration"
                 className="max-h-full max-w-full object-contain"
               />
