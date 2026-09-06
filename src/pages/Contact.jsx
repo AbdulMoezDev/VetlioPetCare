@@ -110,14 +110,19 @@ function Contact() {
                   </div>
                   <div>
                     <h5 className="font-extrabold text-[#27221F] uppercase text-xs">
-                      Email Communication
+                      Developer & Support
                     </h5>
-                    <p className="text-stone-600 mt-0.5 font-medium">
-                      care@vetlio.com
+                    <p className="text-stone-700 mt-0.5 font-bold">
+                      Made by Abdul Moez
                     </p>
-                    <p className="text-xs text-stone-400 font-semibold">
-                      Records: records@vetlio.com
-                    </p>
+                    <a
+                      href="https://instagram.com/abdulmoezdev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-[#70A352] hover:underline font-bold inline-block mt-0.5"
+                    >
+                      Instagram: @abdulmoezdev
+                    </a>
                   </div>
                 </div>
               </div>
