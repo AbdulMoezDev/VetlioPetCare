@@ -25,7 +25,7 @@ function Home() {
           <div className="flex flex-col items-center">
             <div className="flex items-center gap-1 text-[#70A352] mb-1">
               <Heart className="w-5 h-5 fill-current" />
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#27221F]">12,000+</span>
+              <span className="text-2xl sm:text-3xl font-extrabold text-[#27221F]">500+</span>
             </div>
             <p className="text-xs sm:text-sm font-semibold text-stone-600">Loved Pets Treated</p>
           </div>
