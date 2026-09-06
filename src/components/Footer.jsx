@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Phone,
-  Mail,
   Calendar,
   Clock,
   ArrowRight,
@@ -10,24 +9,12 @@ import {
 } from "lucide-react";
 import { useBooking } from "../context/BookingContext";
 
-// Clean brand SVG icons
-const FacebookIcon = () => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-  </svg>
-);
-
+// Clean brand SVG icon
 const InstagramIcon = () => (
   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-  </svg>
-);
-
-const TwitterIcon = () => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
@@ -215,20 +202,25 @@ function Footer() {
                 </form>
               )}
 
-              <div className="mt-5 space-y-1.5 text-xs text-white/90">
+              <div className="mt-5 space-y-2 text-xs text-white/90">
                 <p className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5" /> (555) 349-8720
+                  <Phone className="w-3.5 h-3.5 text-[#A0DF6D]" /> (555) 349-8720
                 </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5" /> care@vetlio.com
-                </p>
+                <a
+                  href="https://instagram.com/abdulmoezdev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-amber-200 hover:text-white font-semibold transition"
+                >
+                  <InstagramIcon /> Made by Abdul Moez
+                </a>
               </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="w-full max-w-6xl mt-12 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/75">
-            <p>© {new Date().getFullYear()} Vetlio Pet Care Inc. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Vetlio Pet Care. Crafted with 💚 by <span className="font-bold text-white">Abdul Moez</span>.</p>
             <div className="flex items-center gap-4">
               <a href="#privacy" className="hover:text-white transition">Privacy Policy</a>
               <span>•</span>
@@ -237,14 +229,15 @@ function Footer() {
               <a href="#faq" className="hover:text-white transition">FAQs</a>
             </div>
             <div className="flex items-center gap-3 text-white">
-              <a href="#facebook" aria-label="Facebook" className="p-2 bg-white/10 hover:bg-white/25 rounded-full transition">
-                <FacebookIcon />
-              </a>
-              <a href="#instagram" aria-label="Instagram" className="p-2 bg-white/10 hover:bg-white/25 rounded-full transition">
+              <a
+                href="https://instagram.com/abdulmoezdev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram @abdulmoezdev"
+                className="flex items-center gap-2 px-3.5 py-1.5 bg-white/10 hover:bg-white/25 rounded-full transition font-semibold text-xs shadow-2xs"
+              >
                 <InstagramIcon />
-              </a>
-              <a href="#twitter" aria-label="Twitter" className="p-2 bg-white/10 hover:bg-white/25 rounded-full transition">
-                <TwitterIcon />
+                <span>@abdulmoezdev</span>
               </a>
             </div>
           </div>
